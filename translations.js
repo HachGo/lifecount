@@ -28,17 +28,17 @@ const translations = {
         subtitle: "根据《2023年我国卫生健康事业发展统计公报》，中国人均预期寿命达到78.6岁",
         
         // 输入部分
-        dobLabel: "输入您的出生日期：",
+        dobLabel: "请选择您的出生日期：",
         calculateBtn: "计算",
         
         // 错误信息
-        errorEmpty: "请输入您的出生日期。",
-        errorInvalidFormat: "日期格式无效。请使用YYYY-MM-DD格式。",
+        errorEmpty: "请完整选择您的出生日期。",
+        errorInvalidFormat: "日期格式无效，请重新选择。",
         errorFutureDate: "出生日期不能是未来日期。",
         errorTimePassed: "根据估计，时间已经过去了！",
         
         // 结果部分
-        approximately: "大约还有：",
+        approximately: "您的生命剩余时间：",
         days: "天",
         weeks: "周",
         months: "月",

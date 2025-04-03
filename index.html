@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Left Timer</title>
+    <title>生命剩余计时器</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,35 +12,62 @@
 </head>
 <body>
     <div class="language-selector">
-        <button class="lang-btn active" data-lang="en">English</button>
-        <button class="lang-btn" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn active" data-lang="zh">中文</button>
     </div>
-    <div class="container">
-        <h1>Your Estimated Time Remaining</h1>
-        <p class="subtitle">Based on an estimated lifespan (changeable in code).</p>
+    <div class="main-container">
+        <div class="left-section">
+            <h1>您的预计剩余时间</h1>
+            <p class="subtitle">基于预估寿命（可在代码中更改）。</p>
 
-        <div class="input-section">
-            <label for="dob">Enter your Date of Birth:</label>
-            <input type="date" id="dobInput">
-            <button id="calculateBtn">Calculate</button>
-            <p id="errorMsg" class="error"></p>
+            <div class="input-section">
+                <label for="dob">请选择您的出生日期：</label>
+                <div class="date-inputs">
+                    <select id="yearSelect">
+                        <option value="">年份</option>
+                    </select>
+                    <select id="monthSelect">
+                        <option value="">月份</option>
+                    </select>
+                    <select id="daySelect">
+                        <option value="">日期</option>
+                    </select>
+                </div>
+                <button id="calculateBtn">计算</button>
+                <p id="errorMsg" class="error"></p>
+            </div>
+
+            <div id="results" class="results-section hidden">
+                <h2>大约还剩：</h2>
+                <div class="result-item">
+                    <span id="daysLeft" class="value">---</span>
+                    <span class="unit">天</span>
+                </div>
+                <div class="result-item">
+                    <span id="weeksLeft" class="value">---</span>
+                    <span class="unit">周</span>
+                </div>
+                <div class="result-item">
+                    <span id="monthsLeft" class="value">---</span>
+                    <span class="unit">月</span>
+                </div>
+                <p class="reminder">珍惜每一天！</p>
+            </div>
         </div>
 
-        <div id="results" class="results-section hidden">
-            <h2>Approximately:</h2>
-            <div class="result-item">
-                <span id="daysLeft" class="value">---</span>
-                <span class="unit">Days</span>
+        <div class="right-section">
+            <h2>生命时间线可视化</h2>
+            <div class="timeline-container">
+                <div class="timeline-header">
+                    <div class="timeline-legend">
+                        <span class="legend-item"><span class="dot past"></span> 已过去的日子</span>
+                        <span class="legend-item"><span class="dot future"></span> 未来的日子</span>
+                    </div>
+                </div>
+                <div id="timelineGrid" class="timeline-grid">
+                    <!-- 时间线格子将通过JavaScript动态生成 -->
+                </div>
             </div>
-            <div class="result-item">
-                <span id="weeksLeft" class="value">---</span>
-                <span class="unit">Weeks</span>
-            </div>
-            <div class="result-item">
-                <span id="monthsLeft" class="value">---</span>
-                <span class="unit">Months</span>
-            </div>
-             <p class="reminder">Make them count!</p>
         </div>
     </div>
 
