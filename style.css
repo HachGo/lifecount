@@ -1,0 +1,147 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #e67e22; /* Orange color */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 400;
+}
+
+.input-section input[type="date"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-section input[type="date"]:focus {
+    border-color: #fda085;
+}
+
+
+.input-section button {
+    padding: 10px 20px;
+    background-color: #e67e22; /* Orange */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.input-section button:hover {
+    background-color: #d35400; /* Darker orange */
+}
+
+.input-section button:active {
+    transform: scale(0.98);
+}
+
+.error {
+    color: #e74c3c; /* Red */
+    font-size: 0.9em;
+    margin-top: 10px;
+    height: 1.2em; /* Reserve space */
+}
+
+.results-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.results-section.hidden {
+    display: none;
+}
+
+.results-section h2 {
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+.result-item .value {
+    display: block;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #e67e22; /* Orange */
+    margin-bottom: 5px;
+}
+
+.result-item .unit {
+    font-size: 1em;
+    color: #777;
+    font-weight: 300;
+}
+
+.reminder {
+    margin-top: 25px;
+    font-style: italic;
+    color: #555;
+    font-weight: 300;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Left Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Estimated Time Remaining</h1>
+        <p class="subtitle">Based on an estimated lifespan (changeable in code).</p>
+
+        <div class="input-section">
+            <label for="dob">Enter your Date of Birth:</label>
+            <input type="date" id="dobInput">
+            <button id="calculateBtn">Calculate</button>
+            <p id="errorMsg" class="error"></p>
+        </div>
+
+        <div id="results" class="results-section hidden">
+            <h2>Approximately:</h2>
+            <div class="result-item">
+                <span id="daysLeft" class="value">---</span>
+                <span class="unit">Days</span>
+            </div>
+            <div class="result-item">
+                <span id="weeksLeft" class="value">---</span>
+                <span class="unit">Weeks</span>
+            </div>
+            <div class="result-item">
+                <span id="monthsLeft" class="value">---</span>
+                <span class="unit">Months</span>
+            </div>
+             <p class="reminder">Make them count!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
