@@ -25,7 +25,7 @@ const translations = {
     zh: {
         // 标题和副标题
         title: "您的预计剩余时间",
-        subtitle: "根据《2023年我国卫生健康事业发展统计公报》，中国人均预期寿命达到78.6岁",
+        subtitle: "根据《2023年中国卫生健康事业发展统计公报》，中国人均预期寿命为78.6岁",
         
         // 输入部分
         dobLabel: "请选择您的出生日期：",
@@ -43,5 +43,6 @@ const translations = {
         weeks: "周",
         months: "月",
         reminder: "珍惜每一天！"
+
     }
 };
