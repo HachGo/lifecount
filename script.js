@@ -228,7 +228,7 @@ function generateTimelineVisualization(birthDate, endDate) {
     
     // 创建GitHub风格的时间线网格
     // 增加每行显示的方块数量，使整个时间线更紧凑
-    const SQUARES_PER_ROW = 104; // 增加到104个，相当于2年的周数
+    const SQUARES_PER_ROW = 208; // 增加到104个，相当于2年的周数
     const totalRows = Math.ceil(totalDays / SQUARES_PER_ROW);
     
     // 创建行和方块
