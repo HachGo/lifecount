@@ -227,8 +227,8 @@ function generateTimelineVisualization(birthDate, endDate) {
     const pastDays = Math.floor((now.getTime() - birthDate.getTime()) / MS_PER_DAY);
     
     // 创建GitHub风格的时间线网格
-    // 每行显示52个方块，代表一年的52周
-    const SQUARES_PER_ROW = 52;
+    // 增加每行显示的方块数量，使整个时间线更紧凑
+    const SQUARES_PER_ROW = 104; // 增加到104个，相当于2年的周数
     const totalRows = Math.ceil(totalDays / SQUARES_PER_ROW);
     
     // 创建行和方块
@@ -261,4 +261,42 @@ function generateTimelineVisualization(birthDate, endDate) {
         
         timelineGrid.appendChild(rowElement);
     }
+    
+    // 添加进度条显示已过去的生命时间百分比
+    createLifeProgressBar(pastDays, totalDays);
+}
+
+// 创建生命进度条
+function createLifeProgressBar(pastDays, totalDays) {
+    // 检查是否已存在进度条容器，如果存在则移除
+    const existingProgressContainer = document.querySelector('.progress-container');
+    if (existingProgressContainer) {
+        existingProgressContainer.remove();
+    }
+    
+    // 计算生命进度百分比
+    const progressPercentage = (pastDays / totalDays) * 100;
+    const formattedPercentage = progressPercentage.toFixed(2);
+    
+    // 创建进度条容器
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'progress-container';
+    
+    // 创建进度条
+    const progressBar = document.createElement('div');
+    progressBar.className = 'progress-bar';
+    progressBar.style.width = `${progressPercentage}%`;
+    
+    // 创建进度文本
+    const progressText = document.createElement('div');
+    progressText.className = 'progress-text';
+    progressText.textContent = translations[currentLang].progressText.replace('{percentage}', formattedPercentage);
+    
+    // 添加进度条和文本到容器
+    progressContainer.appendChild(progressBar);
+    
+    // 将进度条容器添加到时间线容器后面
+    const timelineContainer = document.querySelector('.timeline-container');
+    timelineContainer.appendChild(progressContainer);
+    timelineContainer.appendChild(progressText);
 }

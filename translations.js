@@ -20,7 +20,10 @@ const translations = {
         days: "Days",
         weeks: "Weeks",
         months: "Months",
-        reminder: "Make them count!"
+        reminder: "Make them count!",
+        
+        // 进度条
+        progressText: "You have lived {percentage}% of your life"
     },
     zh: {
         // 标题和副标题
@@ -42,7 +45,9 @@ const translations = {
         days: "天",
         weeks: "周",
         months: "月",
-        reminder: "珍惜每一天！"
-
+        reminder: "珍惜每一天！",
+        
+        // 进度条
+        progressText: "您已经度过了生命的 {percentage}%"
     }
 };
